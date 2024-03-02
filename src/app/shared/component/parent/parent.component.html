@@ -1,0 +1,11 @@
+<div>
+    @for (user of githubUsers; track user; let idx = $index) {
+    <div>
+        <button (click)="getUser(idx)">{{user.login}}</button>
+    </div>
+    }
+</div>
+
+
+<app-child *ngIf="user" [user]="user"></app-child>
+<!-- {{githubUsers | json}} -->
